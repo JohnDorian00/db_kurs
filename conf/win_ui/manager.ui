@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object id="frame_manager" class="ttk.Frame">
+    <property name="height">200</property>
+    <property name="padding">10</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object id="tbl_users" class="ttk.Treeview">
+        <property name="padding">10</property>
+        <property name="selectmode">browse</property>
+        <property name="show">headings</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object id="id" class="ttk.Treeview.Column">
+            <property name="column_anchor">w</property>
+            <property name="heading_anchor">w</property>
+            <property name="minwidth">30</property>
+            <property name="stretch">true</property>
+            <property name="text" translatable="yes">id</property>
+            <property name="tree_column">false</property>
+            <property name="visible">true</property>
+            <property name="width">30</property>
+          </object>
+        </child>
+        <child>
+          <object id="login" class="ttk.Treeview.Column">
+            <property name="column_anchor">w</property>
+            <property name="heading_anchor">w</property>
+            <property name="minwidth">50</property>
+            <property name="stretch">true</property>
+            <property name="text" translatable="yes">Логин</property>
+            <property name="tree_column">false</property>
+            <property name="visible">true</property>
+            <property name="width">250</property>
+          </object>
+        </child>
+        <child>
+          <object id="user_type" class="ttk.Treeview.Column">
+            <property name="column_anchor">w</property>
+            <property name="heading_anchor">w</property>
+            <property name="minwidth">110</property>
+            <property name="stretch">true</property>
+            <property name="text" translatable="yes">Уровень доступа</property>
+            <property name="tree_column">false</property>
+            <property name="visible">true</property>
+            <property name="width">110</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object id="btn_add" class="ttk.Button">
+        <property name="command">add_user</property>
+        <property name="text" translatable="yes">Добавить пользователя</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_del" class="ttk.Button">
+        <property name="command">del_user</property>
+        <property name="text" translatable="yes">Удалить пользователя</property>
+        <layout>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_refresh" class="ttk.Button">
+        <property name="command">refresh</property>
+        <property name="compound">top</property>
+        <property name="text" translatable="yes">Обновить таблицу</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_exit" class="ttk.Button">
+        <property name="command">back</property>
+        <property name="text" translatable="yes">Выход</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_lbl_login" class="ttk.Label">
+        <property name="text" translatable="yes">Ваш логин: </property>
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">130</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_login" class="ttk.Label">
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">200</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">e</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

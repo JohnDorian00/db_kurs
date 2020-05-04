@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object id="dlg_add_user" class="ttk.Frame">
+    <property name="height">200</property>
+    <property name="padding">10</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object id="inp_login" class="ttk.Entry">
+        <property name="font">TkDefaultFont</property>
+        <property name="justify">left</property>
+        <property name="state">normal</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_pass" class="ttk.Entry">
+        <property name="show">•</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="padx">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_pass2" class="ttk.Entry">
+        <property name="cursor">arrow</property>
+        <property name="show">•</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_type" class="ttk.Combobox">
+        <property name="state">readonly</property>
+        <property name="values">SELLER BUYER MANAGER</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_login" class="ttk.Label">
+        <property name="cursor">arrow</property>
+        <property name="text" translatable="yes">Логин</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_pass" class="ttk.Label">
+        <property name="anchor">w</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="text" translatable="yes">Пароль (Повторите 2 раза)</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_type" class="ttk.Label">
+        <property name="padding">10</property>
+        <property name="text" translatable="yes">Тип пользователя</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_ok" class="ttk.Button">
+        <property name="command">add_user</property>
+        <property name="text" translatable="yes">Добавить</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_cancel" class="ttk.Button">
+        <property name="command">quit</property>
+        <property name="text" translatable="yes">Отменить</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>

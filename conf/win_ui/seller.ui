@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object id="frame_seller" class="ttk.Frame">
+    <property name="height">200</property>
+    <property name="padding">15</property>
+    <property name="width">200</property>
+    <layout>
+      <property name="column">0</property>
+      <property name="propagate">True</property>
+      <property name="row">0</property>
+    </layout>
+    <child>
+      <object id="btn_exit" class="ttk.Button">
+        <property name="command">back</property>
+        <property name="text" translatable="yes">Выйти</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="padx">10</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">s</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_refresh_data" class="ttk.Button">
+        <property name="command">refresh_data</property>
+        <property name="text" translatable="yes">Обновить данные</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="btn_refresh_table" class="ttk.Button">
+        <property name="command">refresh_table</property>
+        <property name="text" translatable="yes">Обновить таблицу</property>
+        <property name="width">18</property>
+        <layout>
+          <property name="column">2</property>
+          <property name="pady">60</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="Separator_1" class="ttk.Separator">
+        <property name="orient">vertical</property>
+        <layout>
+          <property name="column">1</property>
+          <property name="ipady">150</property>
+          <property name="padx">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_fio" class="ttk.Entry">
+        <property name="width">45</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">0</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_city" class="ttk.Entry">
+        <property name="width">45</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">50</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="inp_avg_price" class="ttk.Entry">
+        <property name="width">45</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">100</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_fio" class="ttk.Label">
+        <property name="text" translatable="yes">ФИО</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">25</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_city" class="ttk.Label">
+        <property name="text" translatable="yes">Город</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">75</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_avr_price" class="ttk.Label">
+        <property name="text" translatable="yes">Средняя цена товара</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">125</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="tbl_city_price" class="ttk.Treeview">
+        <property name="selectmode">browse</property>
+        <property name="show">headings</property>
+        <layout>
+          <property name="column">4</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+        <child>
+          <object id="col_city" class="ttk.Treeview.Column">
+            <property name="column_anchor">w</property>
+            <property name="heading_anchor">w</property>
+            <property name="minwidth">20</property>
+            <property name="stretch">true</property>
+            <property name="text" translatable="yes">Город</property>
+            <property name="tree_column">false</property>
+            <property name="visible">true</property>
+            <property name="width">200</property>
+          </object>
+        </child>
+        <child>
+          <object id="col_avg_price" class="ttk.Treeview.Column">
+            <property name="column_anchor">w</property>
+            <property name="heading_anchor">w</property>
+            <property name="minwidth">20</property>
+            <property name="stretch">true</property>
+            <property name="text" translatable="yes">Средняя цена товара ($)</property>
+            <property name="tree_column">false</property>
+            <property name="visible">true</property>
+            <property name="width">200</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object id="Separator_2" class="ttk.Separator">
+        <property name="orient">vertical</property>
+        <layout>
+          <property name="column">3</property>
+          <property name="ipady">150</property>
+          <property name="padx">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_table" class="ttk.Label">
+        <property name="text" translatable="yes">Таблица средних цен по городам</property>
+        <layout>
+          <property name="column">4</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">n</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_lbl_fio" class="ttk.Label">
+        <property name="compound">top</property>
+        <property name="font">TkDefaultFont</property>
+        <property name="text" translatable="yes">Ваше ФИО: </property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">80</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_lbl_city" class="ttk.Label">
+        <property name="text" translatable="yes">Ваш город: </property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">55</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_lbl_avg_price" class="ttk.Label">
+        <property name="text" translatable="yes">Ваша ср. цена:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="pady">30</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_my_price" class="ttk.Label">
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">90</property>
+          <property name="pady">30</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_my_city" class="ttk.Label">
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">75</property>
+          <property name="pady">55</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object id="lbl_my_fio" class="ttk.Label">
+        <layout>
+          <property name="column">0</property>
+          <property name="padx">75</property>
+          <property name="pady">80</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property name="sticky">sw</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
