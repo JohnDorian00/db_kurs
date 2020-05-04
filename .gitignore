@@ -2,3 +2,4 @@ conf/ee.npy
 /venv
 /.idea
 /dist
+ee.py
